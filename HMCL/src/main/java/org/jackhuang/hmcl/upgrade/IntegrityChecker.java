@@ -124,7 +124,7 @@ public final class IntegrityChecker {
             try {
                 Path jarPath = JarUtils.thisJarPath();
                 if (jarPath == null) {
-                    throw new IOException("Failed to find current HMCL location");
+                    throw new IOException("Failed to find current gozMCL location");
                 }
 
                 verifyJar(jarPath);

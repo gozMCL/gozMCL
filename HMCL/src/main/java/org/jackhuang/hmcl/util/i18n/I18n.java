@@ -232,7 +232,7 @@ public final class I18n {
         } else if (task instanceof ServerModpackLocalInstallTask) {
             return i18n("install.installing") + ": " + i18n("modpack.type.server");
         } else if (task instanceof HMCLModpackInstallTask) {
-            return i18n("modpack.installing.given", "HMCL");
+            return i18n("modpack.installing.given", "gozMCL");
         } else if (task instanceof McbbsModpackExportTask || task instanceof ServerModpackExportTask || task instanceof ModrinthModpackExportTask) {
             return i18n("modpack.export");
         } else if (task instanceof MinecraftInstanceTask) {
