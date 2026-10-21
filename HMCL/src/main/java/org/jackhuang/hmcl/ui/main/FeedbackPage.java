@@ -28,7 +28,6 @@ import org.jackhuang.hmcl.ui.construct.SpinnerPane;
 
 import static org.jackhuang.hmcl.util.i18n.I18n.i18n;
 
-
 public class FeedbackPage extends SpinnerPane {
 
     private final WeakListenerHolder holder = new WeakListenerHolder();
