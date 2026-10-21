@@ -92,7 +92,7 @@ jobs:
             for ext in jar exe sh deb; do
               F="HMCL/build/libs/gozMCL-$V.$ext"
               if [ -f "$F" ]; then
-                echo "| [$V.$ext]($BASE/gozMCL-$V.$ext) | \\`$(sha256sum "$F" | cut -d' ' -f1)\` |"
+                echo "| [$V.$ext]($BASE/gozMCL-$V.$ext) | \`$(sha256sum "$F" | cut -d' ' -f1)\` |"
               fi
             done
             echo ""
