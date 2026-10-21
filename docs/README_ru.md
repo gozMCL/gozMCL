@@ -11,7 +11,7 @@
 <!-- #PROPERTY NAME=BADGES -->
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/xhdndmm/gozMCL)
+[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/gozMCL/gozMCL)
 
 [![QQ Group](https://img.shields.io/badge/QQ-gray?style=flat-square&logo=qq&logoColor=ffffff)](https://docs.hmcl.net/groups.html)
 [![Discord](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/jVvC7HfM6U)
@@ -38,8 +38,8 @@ gozMCL обладает отличной кроссплатформенност�
 
 Вы можете скачать gozMCL из следующих источников:
 
-- [Официальный сайт gozMCL](https://github.com/xhdndmm/gozMCL/releases)
-- [GitHub Release](https://github.com/xhdndmm/gozMCL/releases)
+- [Официальный сайт gozMCL](https://github.com/gozMCL/gozMCL/releases)
+- [GitHub Release](https://github.com/gozMCL/gozMCL/releases)
 
 ## Участие
 
@@ -47,8 +47,8 @@ gozMCL — это открытый проект, развиваемый сооб
 
 Вы можете помочь разработке gozMCL следующими способами:
 
-- Сообщайте об ошибках или предлагайте новые функции, [создав issue](https://github.com/xhdndmm/gozMCL/issues/new/choose) на GitHub.
-- Вносите код, сделав fork репозитория на GitHub и [отправив pull request](https://github.com/xhdndmm/gozMCL/compare).
+- Сообщайте об ошибках или предлагайте новые функции, [создав issue](https://github.com/gozMCL/gozMCL/issues/new/choose) на GitHub.
+- Вносите код, сделав fork репозитория на GitHub и [отправив pull request](https://github.com/gozMCL/gozMCL/compare).
 
 Перед участием прочитайте [руководство для участников](./Contributing.md), в котором описано следующее:
 
@@ -59,7 +59,7 @@ gozMCL — это открытый проект, развиваемый сооб
 
 С 2015 года в разработке gozMCL участвовали более 130 человек. Спасибо за ваш труд!
 
-[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/xhdndmm/gozMCL/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/gozMCL/gozMCL/graphs/contributors)
 
 ## Лицензия
 

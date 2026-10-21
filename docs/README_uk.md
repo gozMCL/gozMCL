@@ -11,7 +11,7 @@
 <!-- #PROPERTY NAME=BADGES -->
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/xhdndmm/gozMCL)
+[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/gozMCL/gozMCL)
 
 [![QQ Group](https://img.shields.io/badge/QQ-gray?style=flat-square&logo=qq&logoColor=ffffff)](https://docs.hmcl.net/groups.html)
 [![Discord](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/jVvC7HfM6U)
@@ -38,8 +38,8 @@ gozMCL має чудові кросплатформні можливості. В
 
 Ви можете завантажити gozMCL з таких джерел:
 
-- [Офіційний сайт gozMCL](https://github.com/xhdndmm/gozMCL/releases)
-- [GitHub Release](https://github.com/xhdndmm/gozMCL/releases)
+- [Офіційний сайт gozMCL](https://github.com/gozMCL/gozMCL/releases)
+- [GitHub Release](https://github.com/gozMCL/gozMCL/releases)
 
 ## Внесок
 
@@ -47,8 +47,8 @@ gozMCL — це відкритий проект, який розвиває сп�
 
 Ви можете допомогти розробці gozMCL такими способами:
 
-- Повідомляйте про помилки або пропонуйте нові функції, [створивши issue](https://github.com/xhdndmm/gozMCL/issues/new/choose) на GitHub.
-- Додавайте код, зробивши fork репозиторію на GitHub і [надіславши pull request](https://github.com/xhdndmm/gozMCL/compare).
+- Повідомляйте про помилки або пропонуйте нові функції, [створивши issue](https://github.com/gozMCL/gozMCL/issues/new/choose) на GitHub.
+- Додавайте код, зробивши fork репозиторію на GitHub і [надіславши pull request](https://github.com/gozMCL/gozMCL/compare).
 
 Перед участю прочитайте [посібник для учасників](./Contributing.md), який містить таке:
 
@@ -59,7 +59,7 @@ gozMCL — це відкритий проект, який розвиває сп�
 
 З 2015 року в розробці gozMCL взяли участь понад 130 людей. Дякуємо за вашу працю!
 
-[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/xhdndmm/gozMCL/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/gozMCL/gozMCL/graphs/contributors)
 
 ## Ліцензія
 

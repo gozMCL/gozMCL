@@ -11,7 +11,7 @@
 <!-- #PROPERTY NAME=BADGES -->
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/xhdndmm/gozMCL)
+[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/gozMCL/gozMCL)
 
 [![QQ Group](https://img.shields.io/badge/QQ-gray?style=flat-square&logo=qq&logoColor=ffffff)](https://docs.hmcl.net/groups.html)
 [![Discord](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/jVvC7HfM6U)
@@ -39,8 +39,8 @@ gozMCL 跨域廣矣。Windows、Linux、macOS、FreeBSD 諸常見械綱，x86、
 
 可從下述諸途得 gozMCL：
 
-- [gozMCL 官方網站](https://github.com/xhdndmm/gozMCL/releases)
-- [GitHub Release](https://github.com/xhdndmm/gozMCL/releases)
+- [gozMCL 官方網站](https://github.com/gozMCL/gozMCL/releases)
+- [GitHub Release](https://github.com/gozMCL/gozMCL/releases)
 
 ## 與貢
 
@@ -48,8 +48,8 @@ gozMCL 乃社群共驅之開源項目，迎諸君獻碼或建言。
 
 參與之道如下：
 
-- 於 GitHub 上[創建 Issue](https://github.com/xhdndmm/gozMCL/issues/new/choose)，以報謬誤或求功能。
-- 於 GitHub 上 Fork 倉庫，並[提交 Pull Request](https://github.com/xhdndmm/gozMCL/compare)，以貢代碼。
+- 於 GitHub 上[創建 Issue](https://github.com/gozMCL/gozMCL/issues/new/choose)，以報謬誤或求功能。
+- 於 GitHub 上 Fork 倉庫，並[提交 Pull Request](https://github.com/gozMCL/gozMCL/compare)，以貢代碼。
 
 貢獻之前，請閱[貢獻指南](./Contributing_zh_Hant.md)，中含：
 
@@ -60,7 +60,7 @@ gozMCL 乃社群共驅之開源項目，迎諸君獻碼或建言。
 
 自乙未年（2015）始，百三十余人參與 gozMCL，謝其勤勞！
 
-[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/xhdndmm/gozMCL/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/gozMCL/gozMCL/graphs/contributors)
 
 ## 開源之約
 

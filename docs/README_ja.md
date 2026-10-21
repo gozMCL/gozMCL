@@ -11,7 +11,7 @@
 <!-- #PROPERTY NAME=BADGES -->
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/xhdndmm/gozMCL)
+[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/gozMCL/gozMCL)
 
 [![QQ Group](https://img.shields.io/badge/QQ-gray?style=flat-square&logo=qq&logoColor=ffffff)](https://docs.hmcl.net/groups.html)
 [![Discord](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/jVvC7HfM6U)
@@ -38,8 +38,8 @@ gozMCLが対応しているシステムやCPUアーキテクチャについて�
 
 gozMCL は以下の場所からダウンロードできます。
 
-- [gozMCL 公式サイト](https://github.com/xhdndmm/gozMCL/releases)
-- [GitHub Release](https://github.com/xhdndmm/gozMCL/releases)
+- [gozMCL 公式サイト](https://github.com/gozMCL/gozMCL/releases)
+- [GitHub Release](https://github.com/gozMCL/gozMCL/releases)
 
 ## 貢献
 
@@ -47,8 +47,8 @@ gozMCL はコミュニティ主導のオープンソースプロジェクトで�
 
 gozMCL の開発には、次の方法で参加できます。
 
-- GitHub で [Issue を作成](https://github.com/xhdndmm/gozMCL/issues/new/choose)して、バグ報告や機能要望を行う。
-- GitHub でリポジトリを fork し、[Pull Request を送信](https://github.com/xhdndmm/gozMCL/compare)してコードを貢献する。
+- GitHub で [Issue を作成](https://github.com/gozMCL/gozMCL/issues/new/choose)して、バグ報告や機能要望を行う。
+- GitHub でリポジトリを fork し、[Pull Request を送信](https://github.com/gozMCL/gozMCL/compare)してコードを貢献する。
 
 貢献する前に、以下の内容を含む[貢献ガイド](./Contributing.md)をお読みください。
 
@@ -59,7 +59,7 @@ gozMCL の開発には、次の方法で参加できます。
 
 2015 年以来、130 人を超える貢献者が gozMCL に参加しています。ご協力ありがとうございます。
 
-[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/xhdndmm/gozMCL/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/gozMCL/gozMCL/graphs/contributors)
 
 ## ライセンス
 

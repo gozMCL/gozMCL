@@ -30,9 +30,9 @@
         <br>
         ✅️ 完整支援 (Windows Server 2008 R2 ~ 2025)
         <br>
-        🕰️ <a href="https://github.com/xhdndmm/gozMCL/releases?q=3.6">gozMCL 3.6</a> (Windows Vista)
+        🕰️ <a href="https://github.com/gozMCL/gozMCL/releases?q=3.6">gozMCL 3.6</a> (Windows Vista)
         <br>
-        🕰️ <a href="https://github.com/xhdndmm/gozMCL/releases?q=3.6">gozMCL 3.6</a> (Windows Server 2003 ~ 2008) 
+        🕰️ <a href="https://github.com/gozMCL/gozMCL/releases?q=3.6">gozMCL 3.6</a> (Windows Server 2003 ~ 2008) 
       </td>
       <td>✅️ 完整支援</td>
       <td>✅️ 完整支援</td>
@@ -43,7 +43,7 @@
       <td>
         🕰️ 有限支援 (Windows 7 ~ Windows 10)
         <br>
-        🕰️ <a href="https://github.com/xhdndmm/gozMCL/releases?q=3.6">gozMCL 3.6</a> (Windows XP/Vista)
+        🕰️ <a href="https://github.com/gozMCL/gozMCL/releases?q=3.6">gozMCL 3.6</a> (Windows XP/Vista)
       </td>
       <td>🕰️ 有限支援</td>
       <td>/</td>

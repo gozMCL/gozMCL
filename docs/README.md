@@ -11,7 +11,7 @@
 <!-- #PROPERTY NAME=BADGES -->
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/xhdndmm/gozMCL)
+[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/gozMCL/gozMCL)
 
 [![QQ Group](https://img.shields.io/badge/QQ-gray?style=flat-square&logo=qq&logoColor=ffffff)](https://docs.hmcl.net/groups.html)
 [![Discord](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/jVvC7HfM6U)
@@ -47,7 +47,7 @@ Building gozMCL requires JDK 17 or later (21 recommended); see the [Contributing
 
 You can download gozMCL from the following sources:
 
-- [GitHub Release](https://github.com/xhdndmm/gozMCL/releases)
+- [GitHub Release](https://github.com/gozMCL/gozMCL/releases)
 
 ## Contributing
 
@@ -55,8 +55,8 @@ gozMCL is a community-driven open-source project, and everyone is welcome to con
 
 You can contribute to gozMCL development in the following ways:
 
-- Report bugs or request features by [creating an issue](https://github.com/xhdndmm/gozMCL/issues/new/choose) on GitHub.
-- Contribute code by forking the repository on GitHub and [submitting a pull request](https://github.com/xhdndmm/gozMCL/compare).
+- Report bugs or request features by [creating an issue](https://github.com/gozMCL/gozMCL/issues/new/choose) on GitHub.
+- Contribute code by forking the repository on GitHub and [submitting a pull request](https://github.com/gozMCL/gozMCL/compare).
 
 Before contributing, please read the [Contributing Guide](./Contributing.md), which includes the following:
 
@@ -67,7 +67,7 @@ Before contributing, please read the [Contributing Guide](./Contributing.md), wh
 
 Since 2015, more than 130 contributors have participated in gozMCL. Thank you for your hard work!
 
-[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/xhdndmm/gozMCL/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/gozMCL/gozMCL/graphs/contributors)
 
 ## License
 
@@ -75,8 +75,8 @@ The software is distributed under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.h
 
 ### Additional terms under GPLv3 Section 7
 
-1. When you distribute a modified version of the software, you must change the software name or the version number in a reasonable way in order to distinguish it from the original version. (Under [GPLv3, 7(c)](https://github.com/xhdndmm/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L372-L374))
+1. When you distribute a modified version of the software, you must change the software name or the version number in a reasonable way in order to distinguish it from the original version. (Under [GPLv3, 7(c)](https://github.com/gozMCL/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L372-L374))
 
-   The software name and the version number can be edited [here](https://github.com/xhdndmm/gozMCL/blob/86529c6f15b3be54ed8d89ece47566cf57f43eb7/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java#L36-L38).
+   The software name and the version number can be edited [here](https://github.com/gozMCL/gozMCL/blob/86529c6f15b3be54ed8d89ece47566cf57f43eb7/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java#L36-L38).
 
-2. You must not remove the copyright declaration displayed in the software. (Under [GPLv3, 7(b)](https://github.com/xhdndmm/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L368-L370))
+2. You must not remove the copyright declaration displayed in the software. (Under [GPLv3, 7(b)](https://github.com/gozMCL/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L368-L370))
