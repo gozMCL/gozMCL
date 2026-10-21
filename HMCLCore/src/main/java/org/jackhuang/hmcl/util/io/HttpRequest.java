@@ -40,6 +40,7 @@ import static org.jackhuang.hmcl.util.Lang.wrap;
 import static org.jackhuang.hmcl.util.gson.JsonUtils.GSON;
 import static org.jackhuang.hmcl.util.io.NetworkUtils.createHttpConnection;
 import static org.jackhuang.hmcl.util.io.NetworkUtils.resolveConnection;
+import static org.jackhuang.hmcl.util.logging.Logger.LOG;
 
 public abstract class HttpRequest {
     protected final String url;
@@ -280,10 +281,14 @@ public abstract class HttpRequest {
                     if (e instanceof ResponseCodeException rce && (rce.getResponseCode() == 429 || rce.getResponseCode() == 503)) {
                         Integer retryAfter = rce.getRetryAfterSeconds();
                         if (retryAfter != null && retryAfter > 0) {
-                            delayMillis = Math.min(retryAfter, 30) * 1000L;
+                            delayMillis = Math.min(retryAfter, 120) * 1000L;
                         } else {
                             delayMillis = Math.min(1000L << i, 8000L);
                         }
+                        LOG.warning("Rate limited (HTTP " + rce.getResponseCode() + ") on " + rce.getUrl()
+                                + ", Retry-After: " + (rce.getRetryAfterSeconds() == null
+                                        ? "unspecified" : rce.getRetryAfterSeconds() + "s")
+                                + ", retrying in " + delayMillis + "ms");
                         try {
                             Thread.sleep(delayMillis);
                         } catch (InterruptedException ie) {
