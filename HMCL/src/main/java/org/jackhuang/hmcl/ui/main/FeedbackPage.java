@@ -28,7 +28,6 @@ import org.jackhuang.hmcl.ui.construct.SpinnerPane;
 
 import static org.jackhuang.hmcl.util.i18n.I18n.i18n;
 
-import org.jackhuang.hmcl.Metadata;
 
 public class FeedbackPage extends SpinnerPane {
 
@@ -44,24 +43,28 @@ public class FeedbackPage extends SpinnerPane {
 
         ComponentList groups = new ComponentList();
         {
-            var users = LineButton.createExternalLinkButton(Metadata.GROUPS_URL);
-            users.setLargeTitle(true);
-            users.setLeading(FXUtils.newBuiltinImage("/assets/img/icon.png"));
-            users.setTitle(i18n("contact.chat.qq_group"));
-            users.setSubtitle(i18n("contact.chat.qq_group.statement"));
+            var maintainer1 = LineButton.createExternalLinkButton("https://github.com/WeepingDogel");
+            maintainer1.setLargeTitle(true);
+            maintainer1.setTitle("WeepingDogel");
+            maintainer1.setSubtitle(i18n("about.author.statement"));
+            holder.add(FXUtils.onWeakChangeAndOperate(Themes.darkModeProperty(), darkMode -> maintainer1.setLeading(darkMode
+                    ? FXUtils.newBuiltinImage("/assets/img/github-white.png")
+                    : FXUtils.newBuiltinImage("/assets/img/github.png"))));
 
-            var discord = LineButton.createExternalLinkButton("https://discord.gg/jVvC7HfM6U");
-            discord.setLargeTitle(true);
-            discord.setLeading(FXUtils.newBuiltinImage("/assets/img/discord.png"));
-            discord.setTitle(i18n("contact.chat.discord"));
-            discord.setSubtitle(i18n("contact.chat.discord.statement"));
+            var maintainer2 = LineButton.createExternalLinkButton("https://github.com/xhdndmm");
+            maintainer2.setLargeTitle(true);
+            maintainer2.setTitle("xhdndmm");
+            maintainer2.setSubtitle(i18n("about.author.statement"));
+            holder.add(FXUtils.onWeakChangeAndOperate(Themes.darkModeProperty(), darkMode -> maintainer2.setLeading(darkMode
+                    ? FXUtils.newBuiltinImage("/assets/img/github-white.png")
+                    : FXUtils.newBuiltinImage("/assets/img/github.png"))));
 
-            groups.getContent().setAll(users, discord);
+            groups.getContent().setAll(maintainer1, maintainer2);
         }
 
         ComponentList feedback = new ComponentList();
         {
-            var github = LineButton.createExternalLinkButton("https://github.com/HMCL-dev/HMCL/issues/new/choose");
+            var github = LineButton.createExternalLinkButton("https://github.com/xhdndmm/gozMCL/issues/new/choose");
             github.setLargeTitle(true);
             github.setTitle(i18n("contact.feedback.github"));
             github.setSubtitle(i18n("contact.feedback.github.statement"));
