@@ -58,13 +58,23 @@ public final class AboutPage extends SpinnerPane {
             launcher.setTitle(Metadata.FULL_NAME);
             launcher.setSubtitle(Metadata.VERSION);
 
-            var author = LineButton.createExternalLinkButton("https://space.bilibili.com/1445341");
-            author.setLargeTitle(true);
-            author.setLeading(FXUtils.newBuiltinImage("/assets/img/yellow_fish.png"));
-            author.setTitle("huanghongxun");
-            author.setSubtitle(i18n("about.author.statement"));
+            var author1 = LineButton.createExternalLinkButton("https://github.com/WeepingDogel");
+            author1.setLargeTitle(true);
+            author1.setTitle("WeepingDogel");
+            author1.setSubtitle(i18n("about.author.statement"));
+            holder.add(FXUtils.onWeakChangeAndOperate(Themes.darkModeProperty(), darkMode -> author1.setLeading(darkMode
+                    ? FXUtils.newBuiltinImage("/assets/img/github-white.png")
+                    : FXUtils.newBuiltinImage("/assets/img/github.png"))));
 
-            about.getContent().setAll(launcher, author);
+            var author2 = LineButton.createExternalLinkButton("https://github.com/xhdndmm");
+            author2.setLargeTitle(true);
+            author2.setTitle("xhdndmm");
+            author2.setSubtitle(i18n("about.author.statement"));
+            holder.add(FXUtils.onWeakChangeAndOperate(Themes.darkModeProperty(), darkMode -> author2.setLeading(darkMode
+                    ? FXUtils.newBuiltinImage("/assets/img/github-white.png")
+                    : FXUtils.newBuiltinImage("/assets/img/github.png"))));
+
+            about.getContent().setAll(launcher, author1, author2);
         }
 
         ComponentList thanks = loadIconedTwoLineList("/assets/about/thanks.json");
