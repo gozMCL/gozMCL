@@ -31,7 +31,7 @@ MICROSOFT_AUTH_ID=6a3728d6-27a3-4180-99bb-479895b8f88e ./gradlew :HMCL:shadowJar
 ## 通过 GitHub Actions 发布
 
 仓库内置 `Create Release` workflow（`.github/workflows/release.yml`），
-在 GitHub 上构建并发布 `jar / exe / sh / deb` 四种产物到 [Releases](https://github.com/xhdndmm/gozMCL/releases)。
+在 GitHub 上构建并发布 `jar / exe / sh / deb` 四种产物到 [Releases](https://github.com/gozMCL/gozMCL/releases)。
 
 1. 在 Settings → Secrets and variables → Actions 中添加（可选）：
    - `MICROSOFT_AUTH_ID`：微软 OAuth 客户端 ID，构建注入后启用正版账号登录；

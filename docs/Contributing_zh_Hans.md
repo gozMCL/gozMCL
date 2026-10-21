@@ -54,10 +54,10 @@ OpenJDK 64-Bit Server VM (build 25+37-LTS, mixed mode, sharing)
 
 - 通过 [Git](https://git-scm.com/downloads) 可以获取最新源码:
   ```shell
-  git clone https://github.com/xhdndmm/gozMCL.git
+  git clone https://github.com/gozMCL/gozMCL.git
   cd gozMCL
   ```
-- 从 [GitHub Release 页面](https://github.com/xhdndmm/gozMCL/releases)可以手动下载特定版本的源码。
+- 从 [GitHub Release 页面](https://github.com/gozMCL/gozMCL/releases)可以手动下载特定版本的源码。
 
 ### 构建 gozMCL
 
@@ -95,7 +95,7 @@ gozMCL 提供了一系列调试选项，用于控制启动器的行为。
 |                             | `-Dhmcl.bmclapi.override=<url>`              | 指定 BMCLAPI 的 API Root                 | `https://bmclapi2.bangbang93.com`                                                                            |                                               |
 |                             | `-Dhmcl.discoapi.override=<url>`             | 指定 foojay Disco API 的 API Root        | `https://api.foojay.io/disco/v3.0`                                                                           |
 | `gozMCL_FONT`                 | `-Dhmcl.font.override=<font family>`         | 指定 gozMCL 默认字体                       | 使用系统默认字体                                                                                             |                                               |
-|                             | `-Dhmcl.update_source.override=<url>`        | 指定 gozMCL 更新源                         | `https://github.com/xhdndmm/gozMCL/api/update_link`                                                                |                                               |
+|                             | `-Dhmcl.update_source.override=<url>`        | 指定 gozMCL 更新源                         | `https://github.com/gozMCL/gozMCL/api/update_link`                                                                |                                               |
 |                             | `-Dhmcl.authlibinjector.location=<path>`     | 指定 authlib-injector JAR 文件的位置     | 使用 gozMCL 内嵌的 authlib-injector                                                                            |                                               |
 |                             | `-Dhmcl.openjfx.repo=<maven repository url>` | 添加用于下载 OpenJFX 的自定义 Maven 仓库 |                                                                                                              |                                               |
 |                             | `-Dhmcl.native.encoding=<encoding>`          | 指定原生编码                             | 使用系统的本机编码                                                                                           |                                               |

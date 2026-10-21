@@ -11,7 +11,7 @@
 <!-- #PROPERTY NAME=BADGES -->
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/xhdndmm/gozMCL)
+[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/gozMCL/gozMCL)
 
 [![QQ Group](https://img.shields.io/badge/QQ-gray?style=flat-square&logo=qq&logoColor=ffffff)](https://docs.hmcl.net/groups.html)
 [![Discord](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/jVvC7HfM6U)
@@ -47,7 +47,7 @@ gozMCL 是基于 [HMCL](https://github.com/HMCL-dev/HMCL) 的独立维护分支�
 
 你可以从这些渠道下载 gozMCL：
 
-- [GitHub Release](https://github.com/xhdndmm/gozMCL/releases)
+- [GitHub Release](https://github.com/gozMCL/gozMCL/releases)
 
 ## 参与贡献
 
@@ -55,8 +55,8 @@ gozMCL 是一个社区驱动的开源项目，欢迎任何人参与贡献代码�
 
 你可以通过以下方式参与 gozMCL 的开发：
 
-- 通过在 GitHub 上[创建 Issue](https://github.com/xhdndmm/gozMCL/issues/new/choose) 来报告 Bug 或提出功能请求。
-- 通过在 GitHub 上 Fork 仓库并[提交 Pull Request](https://github.com/xhdndmm/gozMCL/compare) 来贡献代码。
+- 通过在 GitHub 上[创建 Issue](https://github.com/gozMCL/gozMCL/issues/new/choose) 来报告 Bug 或提出功能请求。
+- 通过在 GitHub 上 Fork 仓库并[提交 Pull Request](https://github.com/gozMCL/gozMCL/compare) 来贡献代码。
 
 在参与贡献前，请阅读[贡献指南](./Contributing_zh_Hans.md)，其中包含以下内容：
 
@@ -67,7 +67,7 @@ gozMCL 是一个社区驱动的开源项目，欢迎任何人参与贡献代码�
 
 自 2015 年以来，gozMCL 已经有超过 130 位贡献者参与其中，感谢他们的辛勤付出！
 
-[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/xhdndmm/gozMCL/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/gozMCL/gozMCL/graphs/contributors)
 
 ## 开源协议
 
@@ -76,8 +76,8 @@ gozMCL 是一个社区驱动的开源项目，欢迎任何人参与贡献代码�
 ### 附加条款 (依据 GPLv3 开源协议第七条)
 
 1. 当你分发该程序的修改版本时，你必须以一种合理的方式修改该程序的名称或版本号，以示其与原始版本不同。(
-   依据 [GPLv3, 7(c)](https://github.com/xhdndmm/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L372-L374))
+   依据 [GPLv3, 7(c)](https://github.com/gozMCL/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L372-L374))
 
-   该程序的名称及版本号可在 [此处](https://github.com/xhdndmm/gozMCL/blob/86529c6f15b3be54ed8d89ece47566cf57f43eb7/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java#L36-L38) 修改。
+   该程序的名称及版本号可在 [此处](https://github.com/gozMCL/gozMCL/blob/86529c6f15b3be54ed8d89ece47566cf57f43eb7/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java#L36-L38) 修改。
 
-2. 你不得移除该程序所显示的版权声明。(依据 [GPLv3, 7(b)](https://github.com/xhdndmm/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L368-L370))
+2. 你不得移除该程序所显示的版权声明。(依据 [GPLv3, 7(b)](https://github.com/gozMCL/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L368-L370))

@@ -11,7 +11,7 @@
 <!-- #PROPERTY NAME=BADGES -->
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/xhdndmm/gozMCL)
+[![GitHub](https://img.shields.io/badge/GitHub-repo-blue?style=flat-square&logo=github)](https://github.com/gozMCL/gozMCL)
 
 [![QQ Group](https://img.shields.io/badge/QQ-gray?style=flat-square&logo=qq&logoColor=ffffff)](https://docs.hmcl.net/groups.html)
 [![Discord](https://img.shields.io/badge/Discord-gray?style=flat-square&logo=discord)](https://discord.gg/jVvC7HfM6U)
@@ -38,8 +38,8 @@ gozMCL 有著強大的跨平臺能力。它不僅支援 Windows、Linux、macOS�
 
 你可以透過這些管道下載 gozMCL：
 
-- [gozMCL 官方網站](https://github.com/xhdndmm/gozMCL/releases)
-- [GitHub Release](https://github.com/xhdndmm/gozMCL/releases)
+- [gozMCL 官方網站](https://github.com/gozMCL/gozMCL/releases)
+- [GitHub Release](https://github.com/gozMCL/gozMCL/releases)
 
 ## 參與貢獻
 
@@ -47,8 +47,8 @@ gozMCL 是一個由社群驅動的開源專案，歡迎任何人參與貢獻程�
 
 你可以透過以下方式參與 gozMCL 的開發：
 
-- 透過在 GitHub 上[建立 Issue](https://github.com/xhdndmm/gozMCL/issues/new/choose) 來回報 Bug 或提出功能請求。
-- 透過在 GitHub 上 Fork 倉庫並[提交 Pull Request](https://github.com/xhdndmm/gozMCL/compare) 來貢獻程式碼。
+- 透過在 GitHub 上[建立 Issue](https://github.com/gozMCL/gozMCL/issues/new/choose) 來回報 Bug 或提出功能請求。
+- 透過在 GitHub 上 Fork 倉庫並[提交 Pull Request](https://github.com/gozMCL/gozMCL/compare) 來貢獻程式碼。
 
 在參與貢獻前，請閱讀[貢獻指南](./Contributing_zh_Hant.md)，其中包含以下內容：
 
@@ -59,7 +59,7 @@ gozMCL 是一個由社群驅動的開源專案，歡迎任何人參與貢獻程�
 
 自 2015 年以來，gozMCL 已經有超過 130 位貢獻者參與其中，感謝他們的辛勤付出！
 
-[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/xhdndmm/gozMCL/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=gozMCL-dev/gozMCL&max=200)](https://github.com/gozMCL/gozMCL/graphs/contributors)
 
 ## 開源協議
 
@@ -67,8 +67,8 @@ gozMCL 是一個由社群驅動的開源專案，歡迎任何人參與貢獻程�
 
 ### 附加條款 (依據 GPLv3 開源協議第七條)
 
-1. 當你分發該程式的修改版本時，你必須以一種合理的方式修改該程式的名稱或版本號，以示其與原始版本不同。(依據 [GPLv3, 7(c)](https://github.com/xhdndmm/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L372-L374))
+1. 當你分發該程式的修改版本時，你必須以一種合理的方式修改該程式的名稱或版本號，以示其與原始版本不同。(依據 [GPLv3, 7(c)](https://github.com/gozMCL/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L372-L374))
 
-   該程式的名稱及版本號可在 [此處](https://github.com/xhdndmm/gozMCL/blob/86529c6f15b3be54ed8d89ece47566cf57f43eb7/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java#L36-L38) 修改。
+   該程式的名稱及版本號可在 [此處](https://github.com/gozMCL/gozMCL/blob/86529c6f15b3be54ed8d89ece47566cf57f43eb7/HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java#L36-L38) 修改。
 
-2. 你不得移除該程式所顯示的版權宣告。(依據 [GPLv3, 7(b)](https://github.com/xhdndmm/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L368-L370))
+2. 你不得移除該程式所顯示的版權宣告。(依據 [GPLv3, 7(b)](https://github.com/gozMCL/gozMCL/blob/11820e31a85d8989e41d97476712b07e7094b190/LICENSE#L368-L370))

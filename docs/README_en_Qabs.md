@@ -21,6 +21,6 @@
 
 ˙ǝʌoqɐ pǝʇsᴉl sǝʇᴉsqǝʍ lɐᴉɔᴉɟɟo ǝɥʇ ɯoɹɟ sǝsɐǝlǝɹ pɐoluʍop oʇ ʎluo pǝpuǝɯɯoɔǝɹ sᴉ ʇᴉ 'ʎɹɐssǝɔǝu ʇou ɥƃnoɥʇl∀
 
-˙[sǝsɐǝlǝɹ qnHʇᴉפ](https://github.com/xhdndmm/gozMCL/releases) uᴉ ˥ƆWH ɟo uoᴉsɹǝʌ ʇsǝʇɐl ǝɥʇ puᴉɟ oslɐ uɐɔ no⅄
+˙[sǝsɐǝlǝɹ qnHʇᴉפ](https://github.com/gozMCL/gozMCL/releases) uᴉ ˥ƆWH ɟo uoᴉsɹǝʌ ʇsǝʇɐl ǝɥʇ puᴉɟ oslɐ uɐɔ no⅄
 
-˙[ǝʇᴉsqǝʍ lɐᴉɔᴉɟɟo](https://github.com/xhdndmm/gozMCL/releases) ǝɥʇ ɯoɹɟ uoᴉsɹǝʌ ʇsǝʇɐl ǝɥʇ pɐoluʍop
+˙[ǝʇᴉsqǝʍ lɐᴉɔᴉɟɟo](https://github.com/gozMCL/gozMCL/releases) ǝɥʇ ɯoɹɟ uoᴉsɹǝʌ ʇsǝʇɐl ǝɥʇ pɐoluʍop
