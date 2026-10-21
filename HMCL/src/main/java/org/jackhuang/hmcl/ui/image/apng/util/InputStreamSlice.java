@@ -65,7 +65,8 @@ public class InputStreamSlice extends InputStream {
             }
             remaining -= skipped;
         }
-        position += n; // adjust position by correct skip
+        // n is clamped to available() (int) above, so it fits the int-typed position
+        position += (int) n; // adjust position by correct skip
         return n;
     }
 

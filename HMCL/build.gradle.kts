@@ -24,6 +24,9 @@ plugins {
     alias(libs.plugins.shadow)
 }
 
+// Release artifacts are named after the project "gozMCL" (jar/exe/sh/deb), not the module name.
+base.archivesName.set("gozMCL")
+
 val projectConfig = PropertiesUtils.load(rootProject.file("config/project.properties").toPath())
 
 val isOfficial = JenkinsUtils.IS_ON_CI || GitHubActionUtils.IS_ON_OFFICIAL_REPO
