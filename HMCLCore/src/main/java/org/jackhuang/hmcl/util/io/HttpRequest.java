@@ -128,10 +128,19 @@ public abstract class HttpRequest {
         int code = con.getResponseCode();
         if (code / 100 != 2) {
             if (!ignoreHttpCode && !toleratedHttpCodes.contains(code)) {
+                Integer retryAfter = null;
+                String retryAfterHeader = con.getHeaderField("Retry-After");
+                if (retryAfterHeader != null) {
+                    try {
+                        retryAfter = Integer.parseInt(retryAfterHeader.trim());
+                    } catch (NumberFormatException ignored) {
+                        // The Retry-After header may also carry an HTTP-date, which is not used here.
+                    }
+                }
                 try {
-                    throw new ResponseCodeException(this.url, code, NetworkUtils.readFullyAsString(con));
+                    throw new ResponseCodeException(this.url, code, NetworkUtils.readFullyAsString(con), retryAfter);
                 } catch (IOException e) {
-                    throw new ResponseCodeException(this.url, code, e);
+                    throw new ResponseCodeException(this.url, code, e, retryAfter);
                 }
             }
         }
@@ -264,6 +273,25 @@ public abstract class HttpRequest {
                 return supplier.get();
             } catch (Throwable e) {
                 exception = e;
+                if (i + 1 < retryTimes) {
+                    // When the server rate-limits (429) or is temporarily unavailable (503),
+                    // honor the Retry-After header or fall back to exponential backoff.
+                    long delayMillis = 0;
+                    if (e instanceof ResponseCodeException rce && (rce.getResponseCode() == 429 || rce.getResponseCode() == 503)) {
+                        Integer retryAfter = rce.getRetryAfterSeconds();
+                        if (retryAfter != null && retryAfter > 0) {
+                            delayMillis = Math.min(retryAfter, 30) * 1000L;
+                        } else {
+                            delayMillis = Math.min(1000L << i, 8000L);
+                        }
+                        try {
+                            Thread.sleep(delayMillis);
+                        } catch (InterruptedException ie) {
+                            Thread.currentThread().interrupt();
+                            break;
+                        }
+                    }
+                }
             }
         }
         if (exception != null) {

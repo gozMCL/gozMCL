@@ -37,6 +37,7 @@ import org.jackhuang.hmcl.game.OAuthServer;
 import org.jackhuang.hmcl.task.Schedulers;
 import org.jackhuang.hmcl.util.gson.JsonUtils;
 import org.jackhuang.hmcl.util.io.JarUtils;
+import org.jackhuang.hmcl.util.io.ResponseCodeException;
 import org.jackhuang.hmcl.util.skin.InvalidSkinException;
 import org.jetbrains.annotations.Nullable;
 
@@ -504,8 +505,20 @@ public final class Accounts {
     }
     // ====
 
+    /// Reports whether any exception in the cause chain is a rate-limited HTTP response (429).
+    private static boolean isRateLimited(Throwable exception) {
+        for (Throwable t = exception; t != null; t = t.getCause()) {
+            if (t instanceof ResponseCodeException rce && rce.getResponseCode() == 429) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static String localizeErrorMessage(Exception exception) {
-        if (exception instanceof NoCharacterException) {
+        if (isRateLimited(exception)) {
+            return i18n("account.failed.rate_limited");
+        } else if (exception instanceof NoCharacterException) {
             return i18n("account.failed.no_character");
         } else if (exception instanceof ServerDisconnectException) {
             if (exception.getCause() instanceof SSLException) {

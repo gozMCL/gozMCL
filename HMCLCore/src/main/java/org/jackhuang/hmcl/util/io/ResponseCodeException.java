@@ -30,6 +30,8 @@ public final class ResponseCodeException extends IOException {
     private final int responseCode;
     /// Optional response text supplied by the caller.
     private final @Nullable String data;
+    /// Suggested delay before retrying, in seconds, or `null` if the server did not specify one.
+    private final @Nullable Integer retryAfterSeconds;
 
     /// Creates a failure for a URL and HTTP status code.
     public ResponseCodeException(WebURL url, int responseCode) {
@@ -43,15 +45,17 @@ public final class ResponseCodeException extends IOException {
 
     /// Creates a failure for a URL and HTTP status code with optional response text.
     public ResponseCodeException(WebURL url, int responseCode, @Nullable String data) {
-        this(url.toString(), responseCode, data);
+        this(url.toString(), responseCode, data, null);
     }
 
     /// Creates a failure for a request address and HTTP status code.
     public ResponseCodeException(String url, int responseCode) {
-        super("Unable to request url " + url + ", response code: " + responseCode);
-        this.url = url;
-        this.responseCode = responseCode;
-        this.data = null;
+        this(url, responseCode, (String) null, (Integer) null);
+    }
+
+    /// Creates a failure for a request address, HTTP status code and optional response text.
+    public ResponseCodeException(String url, int responseCode, @Nullable String data) {
+        this(url, responseCode, data, null);
     }
 
     /// Creates a failure for a request address and HTTP status code with an optional cause.
@@ -60,14 +64,25 @@ public final class ResponseCodeException extends IOException {
         this.url = url;
         this.responseCode = responseCode;
         this.data = null;
+        this.retryAfterSeconds = null;
     }
 
-    /// Creates a failure for a request address and HTTP status code with optional response text.
-    public ResponseCodeException(String url, int responseCode, @Nullable String data) {
+    /// Creates a failure for a request address, HTTP status code, a cause and a suggested retry delay.
+    public ResponseCodeException(String url, int responseCode, @Nullable Throwable cause, @Nullable Integer retryAfterSeconds) {
+        super("Unable to request url " + url + ", response code: " + responseCode, cause);
+        this.url = url;
+        this.responseCode = responseCode;
+        this.data = null;
+        this.retryAfterSeconds = retryAfterSeconds;
+    }
+
+    /// Creates a failure for a request address, HTTP status code, response text and a suggested retry delay.
+    public ResponseCodeException(String url, int responseCode, @Nullable String data, @Nullable Integer retryAfterSeconds) {
         super("Unable to request url " + url + ", response code: " + responseCode + ", data: " + data);
         this.url = url;
         this.responseCode = responseCode;
         this.data = data;
+        this.retryAfterSeconds = retryAfterSeconds;
     }
 
     /// Returns the request address supplied by the caller.
@@ -83,5 +98,10 @@ public final class ResponseCodeException extends IOException {
     /// Returns the supplied response text, or `null` if none was supplied.
     public @Nullable String getData() {
         return data;
+    }
+
+    /// Returns the suggested delay before retrying, in seconds, or `null` if the server did not specify one.
+    public @Nullable Integer getRetryAfterSeconds() {
+        return retryAfterSeconds;
     }
 }
