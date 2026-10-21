@@ -263,7 +263,7 @@ public final class UpdateHandler {
     private static Path getCurrentLocation() throws IOException {
         Path path = JarUtils.thisJarPath();
         if (path == null) {
-            throw new IOException("Failed to find current HMCL location");
+            throw new IOException("Failed to find current gozMCL location");
         }
         return path;
     }
