@@ -101,19 +101,19 @@ public abstract class CreateDeb extends DefaultTask {
     }
 
     private String getLauncherPath() {
-        return "/usr/bin/hmcl-" + getCurrentTypeName();
+        return "/usr/bin/gozmcl-" + getCurrentTypeName();
     }
 
     private String getTargetPath() {
-        return "/usr/share/java/hmcl/" + getAppShFile().getAsFile().get().getName();
+        return "/usr/share/java/gozmcl/" + getAppShFile().getAsFile().get().getName();
     }
 
     private String getDesktopFilePath() {
-        return "/usr/share/applications/hmcl-%s.desktop".formatted(getCurrentTypeName());
+        return "/usr/share/applications/gozmcl-%s.desktop".formatted(getCurrentTypeName());
     }
 
     private String getIconTargetPath() {
-        return "/usr/share/icons/hicolor/256x256/apps/hmcl-%s.png".formatted(getCurrentTypeName());
+        return "/usr/share/icons/hicolor/256x256/apps/gozmcl-%s.png".formatted(getCurrentTypeName());
     }
 
     /// Ensures parent directories exist in the tar stream before child entries are written.
@@ -232,34 +232,34 @@ public abstract class CreateDeb extends DefaultTask {
                 Priority: optional
                 Architecture: all
                 Installed-Size: %d
-                Maintainer: Glavo <zjx001202@gmail.com>
-                Description: Hello Minecraft! Launcher
-                Homepage: https://github.com/HMCL-dev/HMCL
+                Maintainer: WeepingDogel & xhdndmm
+                Description: gozMCL - community fork of HMCL, a Minecraft launcher
+                Homepage: https://github.com/gozMCL/gozMCL
                 """.formatted(getCurrentType().getPackageName(), getVersion().get(), Math.max(installedSize, 1)) + "\n";
     }
 
-    private static final String COMMON_LAUNCHER_PATH = "/usr/bin/hmcl";
+    private static final String COMMON_LAUNCHER_PATH = "/usr/bin/gozmcl";
 
-    /// Registers the channel command into the shared `hmcl` alternatives group.
+    /// Registers the channel command into the shared `gozmcl` alternatives group.
     private String getPostinst() {
         return """
                 #!/bin/sh
                 set -e
                 
                 if [ "$1" = configure ]; then
-                    update-alternatives --install %s hmcl %s %d
+                    update-alternatives --install %s gozmcl %s %d
                 fi
                 """.formatted(COMMON_LAUNCHER_PATH, getLauncherPath(), getCurrentType().getAlternativesPriority());
     }
 
-    /// Removes the channel command from the shared `hmcl` alternatives group.
+    /// Removes the channel command from the shared `gozmcl` alternatives group.
     private String getPrerm() {
         return """
                 #!/bin/sh
                 set -e
                 
                 if [ "$1" = remove ] || [ "$1" = deconfigure ]; then
-                    update-alternatives --remove hmcl %s
+                    update-alternatives --remove gozmcl %s
                 fi
                 """.formatted(getLauncherPath());
     }
@@ -292,7 +292,7 @@ public abstract class CreateDeb extends DefaultTask {
                 [Desktop Entry]
                 Type=Application
                 Name=%s
-                Comment=Hello Minecraft! Launcher
+                Comment=gozMCL, a community fork of HMCL
                 Exec=%s
                 Icon=%s
                 Terminal=false

@@ -65,8 +65,8 @@ jobs:
       - name: Resolve built version
         id: version
         run: |
-          JAR=$(ls HMCL/build/libs/HMCL-*.jar | grep -v '\.sha256$' | head -n 1)
-          V=$(basename "$JAR" | sed 's/^HMCL-//; s/\.jar$//')
+          JAR=$(ls HMCL/build/libs/gozMCL-*.jar | grep -v '\\.sha256$' | head -n 1)
+          V=$(basename "$JAR" | sed 's/^gozMCL-//; s/\.jar$//')
           echo "version=$V" >> "$GITHUB_OUTPUT"
           echo "Building gozMCL version $V (jar: $JAR)"
 
@@ -90,9 +90,9 @@ jobs:
             echo "| File | SHA-256 |"
             echo "| --- | --- |"
             for ext in jar exe sh deb; do
-              F="HMCL/build/libs/HMCL-$V.$ext"
+              F="HMCL/build/libs/gozMCL-$V.$ext"
               if [ -f "$F" ]; then
-                echo "| [$V.$ext]($BASE/HMCL-$V.$ext) | \`$(sha256sum "$F" | cut -d' ' -f1)\` |"
+                echo "| [$V.$ext]($BASE/gozMCL-$V.$ext) | \\`$(sha256sum "$F" | cut -d' ' -f1)\` |"
               fi
             done
             echo ""
@@ -106,9 +106,9 @@ jobs:
           V="${{ steps.version.outputs.version }}"
           FILES=()
           for ext in jar exe sh deb; do
-            F="HMCL/build/libs/HMCL-$V.$ext"
-            [ -f "$F" ] && FILES+=("$F")
-          done
+                    F="HMCL/build/libs/gozMCL-$V.$ext"
+                    [ -f "$F" ] && FILES+=("$F")
+                  done
           ARGS=(
             "goz-$V"
             "${FILES[@]}"
