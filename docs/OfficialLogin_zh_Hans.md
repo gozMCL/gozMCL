@@ -7,6 +7,18 @@
 gozMCL 支持登录正版（微软）账号，但前提是构建时把微软 OAuth 客户端 ID 打进 jar。
 缺少客户端 ID 时，登录按钮会被禁用，并显示「非官方构建」提示。
 
+## 方案 A（推荐）：直接使用上游公共客户端 ID
+
+官方 HMCL 构建使用的公共客户端 ID `6a3728d6-27a3-4180-99bb-479895b8f88e` 已注册好
+gozMCL 所需的全部重定向 URI，拿来即用。gozMCL 的发布构建默认内置该 ID。
+
+```sh
+./gradlew :gozMCL:shadowJar -Phmcl.microsoft.auth.id=6a3728d6-27a3-4180-99bb-479895b8f88e
+```
+
+无需 Azure 账号、无需注册应用。（注意：自己新注册的应用在 `login_with_xbox`
+上速率限制很低，多次登录尝试后会返回 HTTP 429——优先使用公共 ID，或等限流窗口过去。）
+
 ## 客户端 ID 的读取顺序
 
 运行时依次读取：
@@ -20,9 +32,11 @@ gozMCL 支持登录正版（微软）账号，但前提是构建时把微软 OAu
 1. 打开[微软 Entra 管理中心 → 应用注册 → 新注册](https://entra.microsoft.com/#view/Microsoft_AAD_RegisteredApplications/_AppExtensionsBlade?appid=/applications)。
 2. 名称：随意（例如 `gozMCL`）。
 3. **支持的帐户类型**：选择 *任何组织目录（任何 Microsoft Azure AD 租户 v2.0）中的帐户和个人 Microsoft 帐户*，这样两类账号都能用。
-4. **重定向 URI**：平台选 *移动、桌面和单页应用（公共客户端）*，添加 `http://localhost`。
-   - 不需要其他重定向 URI。启动器会在随机端口上开一个本地回环服务
-     （`http://localhost:<端口>/auth-response`），而微软对公共客户端允许任意回环端口。
+4. **重定向 URI**：平台选 *移动、桌面和单页应用（公共客户端）*，**两条都加**：
+   `http://localhost` 和 `http://localhost/auth-response`。
+   - 启动器会在固定端口 29111–29115 之一上开本地回环服务，发送
+     `http://localhost:<端口>/auth-response`。微软对公共客户端允许任意回环端口，
+     但**路径必须与注册值精确匹配**，所以带路径的这条不能少。
 5. 复制 **应用程序（客户端）ID**。无需客户端密钥（公共客户端 + PKCE）。
 
 ## 2. 构建时注入客户端 ID

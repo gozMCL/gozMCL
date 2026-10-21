@@ -19,7 +19,7 @@ gozMCL 是一个独立维护的 [HMCL](https://github.com/HMCL-dev/HMCL) 分支�
 ./gradlew :HMCL:shadowJar
 
 # 启用正版（微软）账号登录
-MICROSOFT_AUTH_ID=<你的 Azure 应用客户端 ID> ./gradlew :HMCL:shadowJar
+MICROSOFT_AUTH_ID=6a3728d6-27a3-4180-99bb-479895b8f88e ./gradlew :HMCL:shadowJar  # 上游 HMCL 公共客户端 ID（推荐，免注册）
 # 或等价的 Gradle 属性方式
 ./gradlew :HMCL:shadowJar -Phmcl.microsoft.auth.id=<你的 Azure 应用客户端 ID>
 ```
@@ -34,7 +34,8 @@ MICROSOFT_AUTH_ID=<你的 Azure 应用客户端 ID> ./gradlew :HMCL:shadowJar
 在 GitHub 上构建并发布 `jar / exe / sh / deb` 四种产物到 [Releases](https://github.com/xhdndmm/gozMCL/releases)。
 
 1. 在 Settings → Secrets and variables → Actions 中添加（可选）：
-   - `MICROSOFT_AUTH_ID`：Azure 应用（客户端）ID，构建注入后启用正版账号登录；
+   - `MICROSOFT_AUTH_ID`：微软 OAuth 客户端 ID，构建注入后启用正版账号登录；
+     推荐用上游公共 ID `6a3728d6-27a3-4180-99bb-479895b8f88e`（免注册、限流配额成熟），详见 docs/OfficialLogin_zh_Hans.md；
    - `CURSEFORGE_API_KEY`：CurseForge API key。
 2. 打开 Actions 页 → 选择 **Create Release** → **Run workflow**：
    - `build_number`：构建号，最终版本为 `<versionRoot>.<build_number>`
