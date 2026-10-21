@@ -7,6 +7,18 @@
 gozMCL 支援登入正版（微軟）帳號，但前提是構建時把微軟 OAuth 用戶端 ID 裝進 jar。
 缺少用戶端 ID 時，登入按鈕會被停用，並顯示「非官方構建」提示。
 
+## 方案 A（推薦）：直接使用上游公用戶端 ID
+
+官方 HMCL 構建使用的公用戶端 ID `6a3728d6-27a3-4180-99bb-479895b8f88e` 已註冊好
+gozMCL 所需的全部重新導向 URI，拿來即用。gozMCL 的發布構建預設內置該 ID。
+
+```sh
+./gradlew :gozMCL:shadowJar -Phmcl.microsoft.auth.id=6a3728d6-27a3-4180-99bb-479895b8f88e
+```
+
+無需 Azure 帳號、無需註冊應用。（注意：自己新註冊的應用在 `login_with_xbox`
+上速率限制很低，多次登入嘗試後會返回 HTTP 429——優先使用公用戶端 ID，或等限流窗口過去。）
+
 ## 用戶端 ID 的讀取順序
 
 執行時依序讀取：
@@ -20,9 +32,11 @@ gozMCL 支援登入正版（微軟）帳號，但前提是構建時把微軟 OAu
 1. 開啟[微軟 Entra 管理中心 → 應用註冊 → 新註冊](https://entra.microsoft.com/#view/Microsoft_AAD_RegisteredApplications/_AppExtensionsBlade?appid=/applications)。
 2. 名稱：隨意（例如 `gozMCL`）。
 3. **支援的帳戶類型**：選擇 *任何組織目錄（任何 Microsoft Azure AD 租戶 v2.0）中的帳戶與個人 Microsoft 帳戶*，這樣兩類帳號都能用。
-4. **重新導向 URI**：平台選 *行動裝置、桌面與單頁應用程式（公共用戶端）*，加入 `http://localhost`。
-   - 不需要其他重新導向 URI。啟動器會在隨機埠開啟一個本地環回服務
-     （`http://localhost:<埠號>/auth-response`），而微軟對公共用戶端允許任意環回埠號。
+4. **重新導向 URI**：平台選 *行動裝置、桌面與單頁應用程式（公共用戶端）*，**兩條都加**：
+   `http://localhost` 與 `http://localhost/auth-response`。
+   - 啟動器會在固定埠 29111–29115 之一開啟本地環回服務，發送
+     `http://localhost:<埠號>/auth-response`。微軟對公共用戶端允許任意環回埠號，
+     但**路徑必須與註冊值精確匹配**，所以帶路徑的這一條不能少。
 5. 複製 **應用程式（用戶端）ID**。無需用戶端密碼（公共用戶端 + PKCE）。
 
 ## 2. 構建時注入用戶端 ID

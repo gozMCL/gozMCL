@@ -7,6 +7,19 @@
 gozMCL can log in with a real (正版) Microsoft account, but only when a Microsoft OAuth client ID is built into the jar.
 The login button is disabled and shows a "unofficial build" hint when the client ID is missing.
 
+## Option A (recommended): use the upstream public client ID
+
+The public client ID used by official HMCL builds — `6a3728d6-27a3-4180-99bb-479895b8f88e` — is registered with the
+redirect URIs gozMCL needs, so it just works. gozMCL release builds ship with this ID baked in.
+
+```sh
+./gradlew :gozMCL:shadowJar -Phmcl.microsoft.auth.id=6a3728d6-27a3-4180-99bb-479895b8f88e
+```
+
+No Azure account or app registration required. (Note: newly self-registered apps have a very low
+rate limit on `login_with_xbox` and return HTTP 429 after a handful of login attempts — prefer the
+public ID, or wait out the limit window.)
+
 ## How the client ID is read
 
 At runtime the launcher reads, in order:
@@ -20,9 +33,11 @@ At runtime the launcher reads, in order:
 1. Go to [Microsoft Entra admin center → App registrations → New registration](https://entra.microsoft.com/#view/Microsoft_AAD_RegisteredApplications/_AppExtensionsBlade?appid=/applications).
 2. Name: anything you like (e.g. `gozMCL`).
 3. **Supported account types**: pick *Accounts in any organizational directory (any Microsoft Azure AD tenant v2.0) and personal Microsoft accounts* so both work.
-4. **Redirect URI**: choose the platform *Mobile, desktop, and single-page applications (public client)* and add `http://localhost`.
-   - No other redirect URIs are needed. The launcher opens a local loopback server on a random port
-     (`http://localhost:<port>/auth-response`) and Microsoft accepts any loopback port for public clients.
+4. **Redirect URI**: choose the platform *Mobile, desktop, and single-page applications (public client)* and add
+   **both** `http://localhost` and `http://localhost/auth-response`.
+   - The launcher opens a local loopback server on one of the fixed ports 29111–29115 and sends
+     `http://localhost:<port>/auth-response`. Microsoft accepts any loopback port for public clients,
+     but the **path must match a registered value exactly**, so the path-form URI is required.
 5. Copy the **Application (client) ID**. No client secret is required (public client + PKCE).
 
 ## 2. Build with the client ID
