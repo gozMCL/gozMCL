@@ -31,7 +31,13 @@ val isOfficial = JenkinsUtils.IS_ON_CI || GitHubActionUtils.IS_ON_OFFICIAL_REPO
 val versionType = System.getenv("VERSION_TYPE") ?: if (isOfficial) "nightly" else "unofficial"
 val versionRoot = System.getenv("VERSION_ROOT") ?: projectConfig.getProperty("versionRoot") ?: "3"
 
-val microsoftAuthId = System.getenv("MICROSOFT_AUTH_ID") ?: ""
+val microsoftAuthId = System.getenv("MICROSOFT_AUTH_ID")
+    ?: findProperty("hmcl.microsoft.auth.id")?.toString()
+    ?: ""
+if (microsoftAuthId.isEmpty()) {
+    logger.lifecycle("hmcl.microsoft.auth.id is empty: Microsoft (official) account login will be disabled in this build. " +
+        "Set MICROSOFT_AUTH_ID or -Phmcl.microsoft.auth.id=<Azure app client ID> to enable it.")
+}
 val curseForgeApiKey = System.getenv("CURSEFORGE_API_KEY") ?: ""
 
 val launcherExe = System.getenv("HMCL_LAUNCHER_EXE") ?: ""
